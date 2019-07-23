@@ -14,5 +14,10 @@ public class WebdriverManager {
 		
 		 }
 
+	public WebDriver getDriver() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }
