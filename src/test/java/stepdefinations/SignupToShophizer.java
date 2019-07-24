@@ -13,6 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import baseClass.BaseDetails;
 import baseClass.BrowsersDetails;
+import baseClass.DBConnection;
 import baseClass.PropertyfileReader;
 //import baseClass.URL;
 import cucumber.api.java.en.Given;
@@ -36,8 +37,9 @@ public class SignupToShophizer {
 	@When("^i enter the URL of the application$")
 	public void i_enter_the_URL_of_the_application() throws FileNotFoundException, IOException {
 		System.out.println("Entering url");
-		 BaseDetails.driver.get(PropertyfileReader.propertyreader(
-		 "C:\\Users\\amaresh.rout\\eclipse-workspace\\CucumberPOC\\src\\main\\propertyfiles\\ApplicationDetails.properties", "URL"));
+		BaseDetails.driver.get(PropertyfileReader.propertyreader(
+				"C:\\Users\\amaresh.rout\\eclipse-workspace\\CucumberPOC\\src\\main\\propertyfiles\\ApplicationDetails.properties",
+				"URL"));
 	}
 
 	@Then("^I should see the Login page of the application$")
@@ -58,13 +60,14 @@ public class SignupToShophizer {
 
 	@When("^I enter valid personal information$")
 	public void i_enter_valid_personal_information() {
-		SignupPage.FirstnameSignUP.sendKeys("Amaresh");
-		SignupPage.LastnameSignUP.sendKeys("Kumar");
-		new SelectDropDownList().SelectUsingVisibleValue(SignupPage.SelectCountryDDL, "India");
-		SignupPage.SignupState.sendKeys("Odisha");
-		SignupPage.SignupEmail.sendKeys("amaresh@email.com");
-		SignupPage.password.sendKeys("Test@1234");
-		SignupPage.Repeatpassword.sendKeys("Test@1234");
+		DBConnection dbConnection = new DBConnection();
+		SignupPage.FirstnameSignUP.sendKeys(dbConnection.DBconnect("FirstName"));
+		SignupPage.LastnameSignUP.sendKeys(dbConnection.DBconnect("Lastname"));
+		new SelectDropDownList().SelectUsingVisibleValue(SignupPage.SelectCountryDDL, dbConnection.DBconnect("Country"));
+		SignupPage.SignupState.sendKeys(dbConnection.DBconnect("State"));
+		SignupPage.SignupEmail.sendKeys(dbConnection.DBconnect("Email"));
+		SignupPage.password.sendKeys(dbConnection.DBconnect("Password"));
+		SignupPage.Repeatpassword.sendKeys(dbConnection.DBconnect("RepeatPassword"));
 
 	}
 

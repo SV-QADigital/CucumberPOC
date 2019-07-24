@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="590" started-at="2019-07-16T06:32:40Z" finished-at="2019-07-16T06:32:40Z">
+  <suite name="Suite" duration-ms="504" started-at="2019-07-24T06:08:30Z" finished-at="2019-07-24T06:08:30Z">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.Signup@7a187f14]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Test" duration-ms="590" started-at="2019-07-16T06:32:40Z" finished-at="2019-07-16T06:32:40Z">
+    <test name="Test" duration-ms="504" started-at="2019-07-24T06:08:30Z" finished-at="2019-07-24T06:08:30Z">
       <class name="Runner.Signup">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:Runner.Signup@7a187f14]" name="setUpClass" is-config="true" duration-ms="286" started-at="2019-07-16T12:02:40Z" finished-at="2019-07-16T12:02:40Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:Runner.Signup@7a187f14]" name="setUpClass" is-config="true" duration-ms="281" started-at="2019-07-24T11:38:30Z" finished-at="2019-07-24T11:38:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.Signup@7a187f14]" name="feature" duration-ms="205" started-at="2019-07-16T12:02:40Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-07-16T12:02:40Z">
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.Signup@7a187f14]" name="feature" duration-ms="144" started-at="2019-07-24T11:38:30Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-07-24T11:38:30Z">
           <params>
             <param index="0">
               <value>
@@ -55,16 +55,15 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 Caused by: java.lang.NullPointerException
-	at baseClass.BrowsersDetails.setupbrowser(BrowsersDetails.java:27)
-	at stepdefinations.SignupToShophizer.i_opened_the_browser(SignupToShophizer.java:32)
-	at ✽.Given I opened the browser(./src/test/Resources/Featurefiles/Signup.feature:5)
+	at stepdefinations.SignupToShophizer.i_enter_the_URL_of_the_application(SignupToShophizer.java:39)
+	at ✽.When i enter the URL of the application(./src/test/Resources/Featurefiles/Signup.feature:6)
 ]]>
             </full-stacktrace>
           </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runner.Signup@7a187f14]" name="tearDownClass" is-config="true" duration-ms="31" started-at="2019-07-16T12:02:40Z" finished-at="2019-07-16T12:02:40Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runner.Signup@7a187f14]" name="tearDownClass" is-config="true" duration-ms="16" started-at="2019-07-24T11:38:30Z" finished-at="2019-07-24T11:38:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

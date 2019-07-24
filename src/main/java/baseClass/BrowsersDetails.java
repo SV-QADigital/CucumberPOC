@@ -14,21 +14,15 @@ import io.cucumber.datatable.dependency.com.fasterxml.jackson.databind.cfg.BaseS
 
 public class BrowsersDetails {
 
-
 //Application launching according to the browser details filled by the user
 	public void setupbrowser(String Browser) {
 		if (Browser.equalsIgnoreCase("chrome")) {
-			//ChromeOptions option = new ChromeOptions();
-		//	System.setProperty("webdriver.chrome.driver","C:\\Users\\amaresh.rout\\Desktop\\chromedriver.exe");
-		//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-	//	capabilities.setPlatform(Platform.LINUX);
-			//BaseDetails.driver = new ChromeDriver();
-	 //driver = new RemoteWebDriver(new URL("http://172.25.220.189:4444/wd/hub"),capabilities);
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\amaresh.rout\\eclipse-workspace\\CucumberPOC\\src\\main\\Resouces\\chromedriver.exe");
+			BaseDetails.driver= new ChromeDriver();
 			BaseDetails.driver.manage().window().maximize();
-		} else if (Browser.equalsIgnoreCase("firefox")) {
-
+		}   else if (Browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.chrome.driver", "/src/main/resources/drivers/geckodriver.exe");
-			BaseDetails.driver= new FirefoxDriver();
+			BaseDetails.driver = new FirefoxDriver();
 		}
 
 	}
